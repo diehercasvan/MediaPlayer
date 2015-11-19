@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0d0303">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Directory"
+            android:id="@+id/textView"
+            android:layout_margin="15dp"
+            android:textColor="#ffffff" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/spiDirectory"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dialog"
+            android:background="#6a6666" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Files"
+            android:id="@+id/textFiles"
+            android:layout_below="@+id/spiDirectory"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="15dp"
+            android:visibility="gone" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spiFiles"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dialog"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBarTime"
+                    android:layout_span="6"
+                    android:layout_column="0"
+                    android:layout_margin="10dp"
+                    android:indeterminate="false"
+                    android:max="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0:00"
+                    android:id="@+id/textStarTime"
+                    android:layout_column="0"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/btnPrevious"
+                    android:src="@drawable/previous"
+                    android:layout_column="1"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/btnPlay"
+                    android:src="@drawable/play"
+                    android:layout_column="2"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/btnStop"
+                    android:src="@drawable/stop"
+                    android:layout_column="3"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/btnNext"
+                    android:src="@drawable/next"
+                    android:layout_column="4"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0:00"
+                    android:id="@+id/textEndTime"
+                    android:layout_column="5"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textColor="#ffffff" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/btnVolume"
+                    android:src="@drawable/volume_muted"
+                    android:layout_column="0"
+                    android:layout_margin="5dp" />
+
+                <SeekBar
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBarVolume"
+                    android:layout_span="4"
+                    android:layout_column="1"
+                    android:layout_margin="10dp"
+                    android:indeterminate="false"
+                    android:progress="0" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</RelativeLayout>
