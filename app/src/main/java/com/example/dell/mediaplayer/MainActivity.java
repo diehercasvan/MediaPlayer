@@ -270,7 +270,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         }
 
-       
+
         am.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
         btnVolume.setImageResource(iImageResouce);
 
