@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 playMusic();
                 break;
             case R.id.btnStop:
-                mediaPlayer.stop();
+                //mediaPlayer.stop();
                 dTimeProgress = 0;
                 mediaPlayer.seekTo(dTimeProgress);
                 btnPlay.setImageResource(R.drawable.play);
